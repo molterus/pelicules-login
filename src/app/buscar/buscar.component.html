@@ -1,0 +1,15 @@
+<div>
+  <h1>BUSCADOR DE FILMS</h1>
+  <p>Escriu el nom d'una pelicula de Terror</p>
+  <input type="text" (input)="getSearch($event.target.value)">
+</div>
+<div *ngIf="films">
+  <table *ngFor="let x of films">
+    <tr *ngIf="x.genre_ids.indexOf(27) != -1">
+      <strong>{{x.original_title}}</strong><br>
+      <a [routerLink]="['/detalls',x.id]">
+        <img src="https://image.tmdb.org/t/p/w500{{x.poster_path}}" alt="" width=200px>
+      </a>
+    </tr>
+  </table>
+</div>

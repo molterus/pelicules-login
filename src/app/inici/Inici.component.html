@@ -1,0 +1,13 @@
+<div>
+  <h2>Ultimes Estrenes</h2>
+  <div *ngIf="films">
+    <table *ngFor="let x of films">
+      <tr>
+        <strong>{{x.original_title}}</strong><br>
+        <a [routerLink]="['/detalls',x.id]"><img src="https://image.tmdb.org/t/p/w500{{x.poster_path}}" alt="" width=200px></a>
+        
+      </tr>
+    </table>
+  </div>
+</div>
+

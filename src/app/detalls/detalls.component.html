@@ -1,0 +1,24 @@
+<style>
+.selectedFilm {
+  text-align: center;
+}
+.selectedFilm ul,li {
+  text-align: left;
+}
+img{
+  width:70%;
+}
+</style>
+<div class="selectedFilm">
+  <h2>{{original_title}}<button (click)="addFav(id, original_title, poster_path)">&#10025;</button></h2>
+  <img src="https://image.tmdb.org/t/p/w500{{poster_path}}" alt="">
+  <h4>
+    <p>Informació de la película</p>
+    <ul>
+      <li>Titol original: <a href="{{homepage}}" target="_blank"><strong>{{original_title}}</strong></a></li>
+      <li>Llenguatge original: <strong>{{original_language}}</strong></li>
+      <li>Data Estrena: <strong>{{release_date}}</strong></li>
+      <li>Duració: <strong>{{runtime}} min</strong></li>
+    </ul>
+  </h4>
+</div>

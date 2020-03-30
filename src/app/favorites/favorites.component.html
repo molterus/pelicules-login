@@ -1,0 +1,12 @@
+<div>
+  <h1>FAVORITS</h1>
+</div>
+<div>
+  <table *ngFor="let x of films">
+      <tr>
+        <strong>{{x.nom}}</strong><button (click)="delete()">&#10006;</button><br>
+        <a [routerLink]="['/detalls',x.id]"><img src="https://image.tmdb.org/t/p/w500{{x.imatge}}" alt="" width=200px></a>
+        
+      </tr>
+    </table>
+</div>
